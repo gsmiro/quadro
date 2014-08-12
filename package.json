@@ -1,0 +1,16 @@
+{ "name": "quadro",
+  "description": "a small library for creating 'quadros': tabular distributions of individuals on a given set of dates according to given criteria",
+  "version": "0.0.1",
+  "dependencies": {
+    "level": "~0.18.0"
+  },
+  "license": "MIT",
+  "author": "Gabriel Serralha Miró <gsmiro@gmail.com> {http://gsmiro.github.io/}",
+  "main": "lib/quadro.js",
+  "homepage":"http://github.com/gsmiro/quadro",
+  "bugs":"http://github.com/gsmiro/quadro/issues",
+  "repository" :
+  { "type" : "git"
+  , "url" : "http://github.com/gsmiro/quadro.git"
+  }
+}
