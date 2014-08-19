@@ -92,4 +92,45 @@ ctor.prototype = {
   }
 }
 
+var schema = {
+	"$schema": "http://json-schema.org/schema#",
+	"title":"quadro",
+	"properties":{
+		"entity":{
+			"type":"object",
+			"properties":{
+				"name":{"type":"string"},
+				"gender":{"oneOf":[{"$ref":"#/definitions/gender"}],
+				"assignments":{"anyOf":[{"$ref":"#/definitions/assignments"}]}
+			},
+			"required":["name","gender","assignments"]
+		},
+		"recurrence":{
+			"type":"object",
+			"properties":{
+				"name":{"type":"string"},
+				"date":{"type":"string"},
+				"assignments":
+				"requires":{"anyOf":[{"$ref":"#/definitions/assignments"}]
+			},
+			"required":["name","date"]
+		}
+	},
+	"definitions":{
+		"gender":{"enum":["f","F","m","M"]}
+		"assignments":{"enum":["anc","sm","pub","pr","pa","n1","n2","n3","ps","ceb","leb","cat","lat","or"]},
+		"assignment":{
+			"type":"object",
+			"properties":{
+				"name":{"type":"string"},
+				"date":{"type":"string"},
+				"requires":{"anyOf":[{"$ref":"#/definitions/assignments"}]
+			},
+			"required":["name","date","requires"]
+		}
+	},
+	}
+
+}
+
 module.exports = ctor;
